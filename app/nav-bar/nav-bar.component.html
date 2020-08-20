@@ -1,0 +1,41 @@
+
+<div id=body>
+<div class=navbar>
+    <div id=topBar>
+    <div class=img-position>
+        <img id=img1 src="https://mall.tayara.tn/static/media/tmall_logo.2555c113.svg" alt="">
+        <img id=img2 src="../assets/img/i1.png" alt="">
+        <img id=img3 src="../assets/img/i2.png" alt="">
+   </div>
+</div>
+<div id=bar>
+    <div id=insidebar>
+    <img [routerLink]="['']" id=logo src="https://www.tayara.tn/static/tacoweb/tayara/logo.svg" alt="">
+    <input class=search type="search" name="" placeholder="Chercher Toutes les catégories" id="">
+    <button id=search><img class=search-img src="https://img.icons8.com/ios-glyphs/30/000000/search.png"/></button>
+    <div class="connection">
+        <button class=btn>Se connecter</button>
+        <button class=btn>Créer une annonce</button>
+    </div>
+    <div  id=responsive-button>
+        <div  *ngIf='buttonclick==false then condition1 else condition2'></div>
+            <ng-template #condition1>
+        <img (click)='resFun()' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/480px-Hamburger_icon.svg.png" alt="">
+           </ng-template>
+        <ng-template #condition2>
+            <img (click)='closeFun()' src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/19187836491541068764-512.png" alt="">
+        </ng-template>
+        <div *ngIf='buttonclick==true'>
+            <div  class=burger-menu>
+                <ul>
+                    <li>Se connecter</li>
+                    <li>Creer une annonce</li>
+                </ul>
+        </div>
+      </div>
+    </div>
+ </div>
+</div>
+<hr>
+</div>
+</div>
